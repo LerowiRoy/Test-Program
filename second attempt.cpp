@@ -80,8 +80,8 @@ int main(){
             yIsNegative = (mousePosition.y > line.getGlobalBounds().top)? true : false;
 
             //--obtain angle from radian
-            ratio = opposite / hypotenuse;
-            radian = asinf(ratio);
+            ratio = opposite / adjacent;
+            radian = atanf(ratio);
             temp_angle = radian / PI * 180;
 
             //--adapt for angles outside from 270 -> 360
