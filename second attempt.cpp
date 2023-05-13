@@ -1,3 +1,12 @@
+/*
+    Errors are happening on the update and are mainly caused by:
+    ´sf::RectangleShape line´
+    when it is trying to rotate more than 90°. 
+
+    
+    located from -> 67 to 98
+*/
+
 #include<SFML/Graphics.hpp>
 #include<cmath>
 #include<string>
