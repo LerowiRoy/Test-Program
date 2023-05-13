@@ -100,7 +100,7 @@ int main(){
 
             //--change line's angle counterclockwise
             line.setSize(sf::Vector2f(hypotenuse, 1)); 
-            line.setRotation(360.f - angle);                 //<<----------- ERROR/BUG/WTFisGOINGonHERE
+            line.setRotation(360.f - angle);            //<<----------- ERROR/BUG/whyDFdoesTHISaffectMYvariables
 
             //--modify text 
             contentText_1.clear();
