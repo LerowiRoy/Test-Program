@@ -6,6 +6,7 @@
 
 int main(){
     sf::RenderWindow window(sf::VideoMode(800, 600), "Radians & Degrees Examples", sf::Style::Default);
+    window.setFramerateLimit(60);
     sf::Event event;
 
     sf::RectangleShape line;
@@ -74,7 +75,7 @@ int main(){
             radian = asinf(ratio);
             temp_angle = radian / PI * 180;
 
-            //--values higher than 90 degrees
+            //--adapt for angles outside from 270 -> 360
             if (xIsNegative && yIsNegative){
                 angle = 180 + ( temp_angle * -1 );
 
