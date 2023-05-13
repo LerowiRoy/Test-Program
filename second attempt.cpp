@@ -60,14 +60,14 @@ int main(){
 
     while (window.isOpen())
     {
-        //--handle input
+        //--handle input--//
         while (window.pollEvent(event))
         {
             if ((event.type == sf::Event::Closed) || (event.key.code == sf::Keyboard::Escape))
                 window.close();
         }
 
-        //--update
+        //--update--//
         {
             //--obtain triangle values 
             sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
@@ -99,8 +99,8 @@ int main(){
             }
 
             //--change line's angle counterclockwise
-            line.setSize(sf::Vector2f(200, 1));
-            line.setRotation(360.f - angle);
+            line.setSize(sf::Vector2f(hypotenuse, 1)); 
+            line.setRotation(360.f - angle);                 //<<----------- ERROR/BUG/WTFisGOINGonHERE
 
             //--modify text 
             contentText_1.clear();
@@ -126,13 +126,11 @@ int main(){
             polarityText.setString(contentText_2);
         }
 
-        //--render
+        //--render--//
         window.clear();
-        {
             window.draw(valuesText);
             window.draw(polarityText);
             window.draw(line);
-        }
         window.display();
     }
 }
