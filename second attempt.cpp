@@ -24,7 +24,7 @@ int main(){
         window.getSize().x / 2,
         window.getSize().y / 2
     );
-    line.setSize(sf::Vector2f(1, 1));
+    line.setSize(sf::Vector2f(1, 10));
 
     sf::Font font; font.loadFromFile("font/FutilePro.ttf");
     sf::Text valuesText; 
@@ -99,8 +99,8 @@ int main(){
             }
 
             //--change line's angle counterclockwise
-            line.setSize(sf::Vector2f(hypotenuse, 1)); 
-            line.setRotation(360.f - angle);            //<<----------- ERROR/BUG/whyDFdoesTHISaffectMYvariables
+            line.setSize(sf::Vector2f(hypotenuse, 2)); 
+            line.setRotation(360 - angle);            //<<----------- ERROR/BUG/whyDFdoesTHISaffectMYvariables
 
             //--modify text 
             contentText_1.clear();
